@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-row justify="center" align="center">
+    <v-row justify="center" align="center" no-gutters>
       <v-col class="text-center">
         <v-avatar size="150">
           <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John" />
@@ -16,7 +16,8 @@
     <v-row>
       <v-col>
         <h4 class="about">About Me</h4>
-        <p class="text-justify">
+        <v-divider class="mt-2" />
+        <p class="text-justify mt-2">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi

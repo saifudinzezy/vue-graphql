@@ -1,0 +1,5 @@
+//font typography
+https://vuetifyjs.com/en/styles/typography#font-sizes
+
+//text
+https://vuetifyjs.com/en/styles/text#text
