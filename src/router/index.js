@@ -1,27 +1,72 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 
+//https://router.vuejs.org/guide/essentials/passing-props.html#boolean-mode
 Vue.use(VueRouter)
 
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+const routes = [{
+        path: '/',
+        name: 'Login',
+        component: () =>
+            import ('../views/Login/Login.vue')
+    },
+    {
+        path: '/add',
+        name: 'Add',
+        component: () =>
+            import ('../views/Menus/Add.vue')
+    },
+    {
+        // path: '/dashboard/:name',
+        path: '/dashboard',
+        name: 'Dashboard',
+        component: () =>
+            import ('../views/Dashboard.vue'),
+        redirect: {
+            name: 'Blog'
+        },
+        children: [{
+                path: '/blog',
+                name: 'Blog',
+                component() {
+                    return import ('../views/Menus/Blog.vue')
+                }
+            },
+            {
+                path: '/about',
+                name: 'About',
+                component() {
+                    return import ('../views/Menus/About.vue')
+                }
+            },
+            {
+                path: '/profil',
+                name: 'Profil',
+                component() {
+                    return import ('../views/Menus/Profil.vue')
+                }
+            }
+        ]
+    },
+    {
+        path: "/notfound",
+        name: "NotFound",
+        component() {
+            return import ('@/views/Error/404.vue')
+        },
+    },
+    {
+        //redirect jika ada link yg gk kedaftar
+        path: "*",
+        redirect: {
+            name: "NotFound"
+        }
+    }
+
 ]
 
 const router = new VueRouter({
-  routes
+    routes
 })
 
 export default router
