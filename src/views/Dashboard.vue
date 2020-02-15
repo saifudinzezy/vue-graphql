@@ -51,8 +51,8 @@
 
     <v-app-bar app color="white" dark class="blue-text">
       <v-toolbar-title class="blue--text">
-        <!-- <b>{{$route.params.name}}</b> -->
-        <b>{{title}}</b>
+        <b v-if="$route.params.name == null">{{title}}</b>
+        <b v-else>{{$route.params.name}}</b>
       </v-toolbar-title>
       <div class="flex-grow-1"></div>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="blue--text"></v-app-bar-nav-icon>

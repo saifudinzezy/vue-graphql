@@ -18,7 +18,7 @@ const routes = [{
     },
     {
         // path: '/dashboard/:name',
-        path: '/dashboard',
+        path: '/dashboard/:name',
         name: 'Dashboard',
         component: () =>
             import ('../views/Dashboard.vue'),
@@ -30,6 +30,20 @@ const routes = [{
                 name: 'Blog',
                 component() {
                     return import ('../views/Menus/Blog.vue')
+                }
+            },
+            {
+                path: '/blog/detail',
+                name: 'Detail',
+                component() {
+                    return import ('../views/Menus/Detail.vue')
+                }
+            },
+            {
+                path: '/blog/edit',
+                name: 'Edit',
+                component() {
+                    return import ('../views/Add/Edit.vue')
                 }
             },
             {

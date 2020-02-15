@@ -1,0 +1,9 @@
+<template>
+  <v-container>
+    <v-row>
+      <v-col>
+        <p>Edit</p>
+      </v-col>
+    </v-row>
+  </v-container>
+</template>
