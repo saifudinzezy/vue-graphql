@@ -25,11 +25,11 @@
             <h4 class="blue--text">Profil</h4>
           </v-list-item>
 
-          <v-list-item class="tile" @click="openPage('Blog', 'Blog')">
+          <v-list-item class="tile" @click="openPage('Blog', 'Artikel')">
             <v-list-item-action>
               <v-icon color="blue">mdi-comment-text-multiple-outline</v-icon>
             </v-list-item-action>
-            <h4 class="blue--text">Blog</h4>
+            <h4 class="blue--text">Artikel</h4>
           </v-list-item>
 
           <v-list-item class="tile" @click="openPage('About', 'Tentang')">
