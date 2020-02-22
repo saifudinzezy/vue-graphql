@@ -17,12 +17,29 @@
       <v-divider></v-divider>
 
       <v-list nav dense>
-        <v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
+        <v-list-item-group
+          v-model="group"
+          active-class="deep-purple--text text--accent-4"
+        >
           <v-list-item class="tile" @click="openPage('Profil', 'Profil')">
             <v-list-item-action>
               <v-icon color="blue">mdi-account-tie</v-icon>
             </v-list-item-action>
             <h4 class="blue--text">Profil</h4>
+          </v-list-item>
+
+          <v-list-item class="tile" @click="openPage('Edit', 'Tambah Artikel')">
+            <v-list-item-action>
+              <v-icon color="blue">mdi-pencil-plus</v-icon>
+            </v-list-item-action>
+            <h4 class="blue--text">Tambah</h4>
+          </v-list-item>
+
+          <v-list-item class="tile" @click="openPage('Blog', 'Artikel')">
+            <v-list-item-action>
+              <v-icon color="blue">mdi-book-plus-multiple</v-icon>
+            </v-list-item-action>
+            <h4 class="blue--text">Bookmark</h4>
           </v-list-item>
 
           <v-list-item class="tile" @click="openPage('Blog', 'Artikel')">
@@ -51,11 +68,14 @@
 
     <v-app-bar app color="white" dark class="blue-text">
       <v-toolbar-title class="blue--text">
-        <b v-if="$route.params.name == null">{{title}}</b>
-        <b v-else>{{$route.params.name}}</b>
+        <b v-if="$route.params.name == null">{{ title }}</b>
+        <b v-else>{{ $route.params.name }}</b>
       </v-toolbar-title>
       <div class="flex-grow-1"></div>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="blue--text"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon
+        @click.stop="drawer = !drawer"
+        class="blue--text"
+      ></v-app-bar-nav-icon>
     </v-app-bar>
 
     <v-content>

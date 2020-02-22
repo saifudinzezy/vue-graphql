@@ -10,7 +10,7 @@
           class="py-0 px-0 pr-0"
         >
           <v-card>
-            <v-toolbar color="green" dark flat>
+            <v-toolbar color="primary" dark flat>
               <v-btn icon @click="linkRoute('landingfirst')">
                 <v-icon>fas fa-angle-left</v-icon>
               </v-btn>
@@ -37,7 +37,7 @@
                 <v-col md="8" offset-md="2">
                   <v-form>
                     <v-text-field
-                      color="green"
+                      color="primary"
                       label="Title"
                       type="text"
                       outlined
@@ -45,7 +45,7 @@
                     />
 
                     <v-text-field
-                      color="green"
+                      color="primary"
                       label="Image"
                       type="text"
                       v-model="image"
@@ -54,13 +54,13 @@
                     />
 
                     <v-textarea
-                      color="green"
+                      color="primary"
                       label="Artikel"
                       type="text"
                       outlined
                       autofocus
                     />
-                    <v-btn large class="buttonlogin" color="green" dark block
+                    <v-btn large class="buttonlogin" color="primary" dark block
                       >simpan</v-btn
                     >
                   </v-form>
